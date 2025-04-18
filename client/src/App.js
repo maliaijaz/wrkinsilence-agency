@@ -23,7 +23,7 @@ function App() {
   
     try {
       // Replace with your live API endpoint
-      const response = await fetch('https://wrkinsilence-api.onrender.com/api/contact', {
+      const response = await fetch('https://wrkinsilence-agency-api.onrender.com//api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
