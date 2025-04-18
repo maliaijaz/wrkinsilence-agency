@@ -20,14 +20,15 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
-
+  
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      // Replace with your live API endpoint
+      const response = await fetch('https://wrkinsilence-api.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-
+  
       if (response.ok) {
         setStatus('Message sent!');
         setFormData({ name: '', email: '', message: '' });
@@ -38,6 +39,7 @@ function App() {
       setStatus('Error sending message.');
     }
   };
+  
 
   return (
     <div className="App">
